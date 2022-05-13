@@ -1,0 +1,13 @@
+.product {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin: 5px 10px;
+    padding-bottom: 5px;
+}
+.product-card{
+    margin-left: 10px;
+}
+.product-name{
+    color: blue;
+    font-weight: 400;
+}
