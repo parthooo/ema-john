@@ -11,3 +11,16 @@
     color: blue;
     font-weight: 400;
 }
+
+
+.main-button{
+    background-color: gold;
+    width: 150px;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.icon-color{
+    color: gold;
+}
