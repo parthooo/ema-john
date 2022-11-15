@@ -4,18 +4,19 @@ import Product from '../Product/Product';
 import './Shop.css';
 
 const Shop = () => {
-    
     const [products, setProducts] = useState([]);
+    // console.log(products, "partho");
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-simple-resources/master/fakeData/products.JSON')
-        .then (res => res.json())
-        .then (data => setProducts(data))
+            .then(res => res.json())
+            .then(data => setProducts(data))
     }, []);
 
     const [cart, setCart] = useState([]);
-
+    // console.log("cart", cart);
     const handleAddProduct = (product) => {
         const newCart = [...cart, product];
+        // console.log("newCart", newCart);
         setCart(newCart);
     }
 
@@ -24,7 +25,7 @@ const Shop = () => {
             <div className="product-container">
                 <ul>
                     {
-                        products.slice(0,10).map((prod,index) => <Product handleAddProduct={handleAddProduct} product={prod} key={index}></Product>)
+                        products.slice(0, 10).map((prod, index) => <Product handleAddProduct={handleAddProduct} product={prod} key={index}></Product>)
                     }
                 </ul>
             </div>
